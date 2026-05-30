@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-purple: #b026ff;
+  --color-neon-pink: #ff26b9;
+  --color-neon-green: #39ff14;
+  --color-deep-black: #050505;
+}
+
+:root {
+  --background: #050505; /* Deep black */
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Base custom utility classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[var(--color-neon-purple)] to-[var(--color-neon-pink)] bg-clip-text text-transparent;
+  }
+  .bg-gradient-neon {
+    @apply bg-gradient-to-r from-[var(--color-neon-purple)] to-[var(--color-neon-pink)];
+  }
+  .glow-purple {
+    box-shadow: 0 0 15px 2px rgba(176, 38, 255, 0.4);
+  }
+  .glow-pink {
+    box-shadow: 0 0 15px 2px rgba(255, 38, 185, 0.4);
+  }
+  .glow-green {
+    box-shadow: 0 0 15px 2px rgba(57, 255, 20, 0.4);
+  }
+}
