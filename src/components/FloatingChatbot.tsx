@@ -20,13 +20,36 @@ export default function FloatingChatbot() {
     const currentInput = input;
     setInput("");
 
-    // Mock AI response
+    // Smart AI response logic
     setTimeout(() => {
+      const lowerInput = currentInput.toLowerCase();
+      let response = "That's outside my current scope. I'm here to assist with questions about Ritika's portfolio, projects, skills, and professional journey";
+
+      if (lowerInput.includes("about") || lowerInput.includes("who is")) {
+        response = "Ritika is a Full-Stack Developer passionate about creating scalable backend systems and intuitive digital experiences. She has participated in the Smart India Hackathon (SIH) and is an active IEEE member.";
+      } else if (lowerInput.includes("skill") || lowerInput.includes("tech") || lowerInput.includes("language")) {
+        response = "Ritika's skills include Python, JavaScript, Java, React, Next.js, Node.js, MongoDB, MySQL, Redis, and DevOps tools like Render and AWS.";
+      } else if (lowerInput.includes("education") || lowerInput.includes("college") || lowerInput.includes("degree")) {
+        response = "She is pursuing her Bachelor's of Technology in Information Technology from Pranveer Singh Institute Of Technology (2023-2027).";
+      } else if (lowerInput.includes("certificat") || lowerInput.includes("achieve")) {
+        response = "She holds certifications as a Salesforce agentblazer (2025), completed a Software Engineering Virtual Experience from JP Morgan Chase (2025), and holds a Certificate of Membership from IEEE Computer Society.";
+      } else if (lowerInput.includes("project") || lowerInput.includes("work") || lowerInput.includes("build")) {
+        response = "Her top projects include GoalProof (milestone tracker), SourceVault (encrypted cloud repo), AI Business Analytics Co-Pilot, and an AI Powered Smart Attendance system.";
+      } else if (lowerInput.includes("contact") || lowerInput.includes("email") || lowerInput.includes("hire") || lowerInput.includes("reach")) {
+        response = "You can email her directly at rritikasingh2005@gmail.com, or send a message through the Contact form at the bottom of the page!";
+      } else if (lowerInput.includes("github")) {
+        response = "You can check out her code on GitHub: https://github.com/RitikaSingh2005";
+      } else if (lowerInput.includes("linkedin")) {
+        response = "You can connect with her on LinkedIn: https://www.linkedin.com/in/ritikasingh7253";
+      } else if (lowerInput === "hi" || lowerInput.includes("hello") || lowerInput.includes("hey")) {
+        response = "Hello! I am here to answer any questions about Ritika's skills, projects, and education. What would you like to know?";
+      }
+
       setMessages((prev) => [
         ...prev,
-        { role: "ai", content: `You asked about "${currentInput}". I'm a mock AI, but I can tell you that Ritika is an excellent Full-Stack Developer!` }
+        { role: "ai", content: response }
       ]);
-    }, 1000);
+    }, 600);
   };
 
   return (
