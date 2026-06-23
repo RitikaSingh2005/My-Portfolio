@@ -100,15 +100,7 @@ export default function Projects() {
                     <a href="https://github.com/RitikaSingh2005" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                       <FaGithub className="w-5 h-5" />
                     </a>
-                    {project.liveLink ? (
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-neon-purple)] transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    ) : (
-                      <button className="text-gray-400 hover:text-[var(--color-neon-purple)] transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                      </button>
-                    )}
+
                   </div>
                 </div>
                 
