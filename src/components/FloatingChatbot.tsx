@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, X, Send } from "lucide-react";
+import { Bot, X, Send } from "lucide-react";
 
 export default function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +69,7 @@ export default function FloatingChatbot() {
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-neon" />
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-gradient-neon flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-white" />
+                  <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-sm">Ritika's AI</h4>
@@ -143,7 +143,7 @@ export default function FloatingChatbot() {
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: -90, opacity: 0 }}
             >
-              <Sparkles className="w-6 h-6" />
+              <Bot className="w-6 h-6" />
             </motion.div>
           )}
         </AnimatePresence>
