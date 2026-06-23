@@ -22,6 +22,8 @@ const certificationsData = [
   { title: "Salesforce agentblazer & Trailhead", issuer: "salesforce", year: "2025" },
   { title: "Software Engineering Virtual Experience", issuer: "JP Morgan Chase", year: "2025" },
   { title: "Certificate of Membership", issuer: "IEEE Computer Society", year: "2025" },
+  { title: "Artificial Intelligence Tools", issuer: "Google", year: "2026" },
+  { title: "Artificial Intelligence", issuer: "NIELIT", year: "2026" },
 ];
 
 export default function About() {
