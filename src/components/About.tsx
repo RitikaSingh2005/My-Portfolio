@@ -8,10 +8,10 @@ type TabType = "Skills" | "Education" | "Certifications";
 
 const skillsData = [
   { category: "Languages", icon: <Terminal className="w-5 h-5 text-neon-pink" />, items: "Python, JavaScript, Java" },
-  { category: "Frontend", icon: <Code2 className="w-5 h-5 text-neon-purple" />, items: "React, Next.js, Tailwind CSS, Framer Motion" },
-  { category: "Backend", icon: <Server className="w-5 h-5 text-neon-green" />, items: "Node.js, Express, NestJS, GraphQL" },
-  { category: "Databases", icon: <Database className="w-5 h-5 text-blue-400" />, items: "MongoDB, MySQL, Redis" },
-  { category: "DevOps", icon: <Cloud className="w-5 h-5 text-orange-400" />, items: "Render, AWS, CI/CD, Git" },
+  { category: "Frontend", icon: <Code2 className="w-5 h-5 text-neon-purple" />, items: "React, Next.js, Tailwind CSS" },
+  { category: "Backend", icon: <Server className="w-5 h-5 text-neon-green" />, items: "Node.js, Express" },
+  { category: "Databases", icon: <Database className="w-5 h-5 text-blue-400" />, items: "MongoDB, MySQL" },
+  { category: "DevOps", icon: <Cloud className="w-5 h-5 text-orange-400" />, items: "Render, CI/CD, Git" },
 ];
 
 const educationData = [
